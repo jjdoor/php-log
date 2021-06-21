@@ -1,0 +1,12 @@
+{
+    "name": "jjdoor/php-log",
+    "description": "php日志系统",
+    "type": "library",
+    "authors": [
+        {
+            "name": "benjamin",
+            "email": "jjdoor@163.com"
+        }
+    ],
+    "require": {}
+}
