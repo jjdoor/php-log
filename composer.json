@@ -13,5 +13,6 @@
             "email": "jjdoor@163.com"
         }
     ],
-    "require": {}
+    "require": {},
+	"minimum-stability": "2.0",
 }
