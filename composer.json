@@ -1,6 +1,10 @@
 {
     "name": "jjdoor/php-log",
     "description": "php日志系统",
+	"autoload": {
+		"psr-4": {
+			"Log\\": "src/"
+		},
     "type": "library",
     "authors": [
         {
