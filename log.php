@@ -3,7 +3,6 @@
 interface ILogHandler
 {
 	public function write($msg);
-	
 }
 
 class CLogFileHandler implements ILogHandler
