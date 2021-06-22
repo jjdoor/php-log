@@ -3,7 +3,7 @@
     "description": "php日志系统",
 	"autoload": {
 		"psr-4": {
-			"Log\\": "src/"
+			"Benjamin\\Log\\": "src/"
 		}
 	},
     "type": "library",
