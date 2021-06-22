@@ -5,7 +5,7 @@ class Log
 {
 	private $handler = null;
 	private $level = 15;
-	
+
 	private static $instance = null;
 
 	private function __construct(){}
