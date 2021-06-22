@@ -14,7 +14,17 @@ class CLogFileHandler implements ILogHandler
 	{
         $vendorDir = dirname(dirname(__FILE__));
         $baseDir = dirname($vendorDir);
-	    empty($file) && $file = $vendorDir.DIRECTORY_SEPARATOR."logs".DIRECTORY_SEPARATOR.date('Y-m-d').'.log';
+	    if(dirname($file) == "."){//文件
+            $filename = date('Y-m-d')."_".$file;
+            $file = $vendorDir . DIRECTORY_SEPARATOR . "logs" . DIRECTORY_SEPARATOR . $filename;
+        }elseif(empty(dirname($file))){
+            $filename = date('Y-m-d') . '.log';
+            $file = $vendorDir . DIRECTORY_SEPARATOR . "logs" . DIRECTORY_SEPARATOR . $filename;
+        }else{//带相对路径的文件
+//	        $file =
+        }
+
+//        empty($file) && $file = $vendorDir . DIRECTORY_SEPARATOR . "logs" . DIRECTORY_SEPARATOR . $filename;
 		$this->handle = fopen($file,'a');
 		if($this->handle === false)
 		{
