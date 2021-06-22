@@ -12,7 +12,9 @@ class CLogFileHandler implements ILogHandler
 	
 	public function __construct($file = '')
 	{
-	    empty($file) && $file = "../logs/".date('Y-m-d').'.log';
+        $vendorDir = dirname(dirname(__FILE__));
+        $baseDir = dirname($vendorDir);
+	    empty($file) && $file = $vendorDir.DIRECTORY_SEPARATOR."logs".DIRECTORY_SEPARATOR.date('Y-m-d').'.log';
 		$this->handle = fopen($file,'a');
 		if($this->handle === false)
 		{
